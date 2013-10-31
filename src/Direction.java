@@ -7,7 +7,6 @@ abstract public class Direction {
     abstract public Position applyDisplacement(int displacement, Position position);
 
     public static Direction create(String direction) {
-
         if (direction.equals("N"))
             return new North();
 

@@ -1,11 +1,11 @@
 public class North extends Direction {
 
     public Direction rotateRight() {
-        return create("E");
+        return new East();
     }
 
     public Direction rotateLeft() {
-        return create("W");
+        return new West();
     }
 
     public Position applyDisplacement(int displacement, Position position) {
