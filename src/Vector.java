@@ -21,7 +21,7 @@ public class Vector {
                 position));
     }
 
-    public static Vector createVector(int x, int y, String direction) {
+    public static Vector create(int x, int y, String direction) {
         return new Vector(Direction.create(direction), new Position(x, y));
     }
 

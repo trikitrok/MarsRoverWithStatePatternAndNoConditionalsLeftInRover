@@ -6,17 +6,14 @@ abstract public class Direction {
 
     abstract public Position applyDisplacement(int displacement, Position position);
 
+    Directions directions;
+    
+    public Direction(Directions directions) {
+        this.directions = directions;
+    }
+    
     public static Direction create(String direction) {
-        if (direction.equals("N"))
-            return new North();
-
-        if (direction.equals("S"))
-            return new South();
-
-        if (direction.equals("W"))
-            return new West();
-
-        return new East();
+        return new Directions().get(direction);
     }
 
     @Override

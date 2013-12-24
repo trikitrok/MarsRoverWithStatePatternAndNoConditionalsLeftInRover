@@ -3,7 +3,7 @@ public class Rover {
     private Vector vector;
 
     public Rover(int x, int y, String direction) {
-        this.vector = Vector.createVector(x, y, direction);
+        this.vector = Vector.create(x, y, direction);
     }
 
     public void receive(String commandSequence) {

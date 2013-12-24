@@ -1,11 +1,15 @@
 public class South extends Direction {
 
+    public South(Directions directions) {
+        super(directions);
+    }
+    
     public Direction rotateRight() {
-        return new West();
+        return directions.get(Directions.WEST);
     }
 
     public Direction rotateLeft() {
-        return new East();
+        return directions.get(Directions.EAST);
     }
 
     public Position applyDisplacement(int displacement, Position position) {
