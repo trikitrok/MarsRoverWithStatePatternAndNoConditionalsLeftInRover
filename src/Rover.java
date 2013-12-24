@@ -3,10 +3,14 @@ public class Rover {
     private Vector vector;
 
     public Rover(int x, int y, String direction) {
-        this.vector = new Vector(Direction.create(direction), new Position(x, y));
+        this.vector = Vector.createVector(x, y, direction);
     }
 
     public void receive(String commandSequence) {
+        executeCommandsIn(commandSequence);
+    }
+
+    private void executeCommandsIn(String commandSequence) {
         for (int i = 0; i < commandSequence.length(); ++i) {
             Command command = createCommand(commandSequence.substring(i, i + 1));
             vector = command.execute(vector);

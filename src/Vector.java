@@ -8,14 +8,6 @@ public class Vector {
         this.position = position;
     }
 
-    public Position getPosition() {
-        return position;
-    }
-
-    public Direction getDirection() {
-        return direction;
-    }
-
     public Vector rotateRight() {
         return new Vector(direction.rotateRight(), position);
     }
@@ -26,7 +18,11 @@ public class Vector {
 
     public Vector displace(int displacement) {
         return new Vector(direction, direction.applyDisplacement(displacement,
-                          position));
+                position));
+    }
+
+    public static Vector createVector(int x, int y, String direction) {
+        return new Vector(Direction.create(direction), new Position(x, y));
     }
 
     @Override
