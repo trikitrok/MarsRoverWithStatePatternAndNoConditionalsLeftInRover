@@ -7,18 +7,18 @@ public class Rover {
     }
 
     public void receive(String commandSequence) {
-        executeCommandsIn(commandSequence);
+        Commands commands = createCommands(commandSequence);
+        execute(commands);
     }
 
-    private void executeCommandsIn(String commandSequence) {
-        for (int i = 0; i < commandSequence.length(); ++i) {
-            Command command = createCommand(commandSequence.substring(i, i + 1));
-            vector = command.execute(vector);
-        }
+    private void execute(Commands commands) {
+        vector = commands.execute(vector);
     }
 
-    private Command createCommand(String commandAsString) {
-        return Command.create(commandAsString);
+    private Commands createCommands(String commandSequence) {
+        CommandsTable commandsTable = new CommandsTable();        
+        Commands commands = commandsTable.createCommands(commandSequence);
+        return commands;
     }
 
     @Override

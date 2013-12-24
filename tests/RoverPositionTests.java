@@ -7,7 +7,7 @@ public class RoverPositionTests {
     public void facingNorthMoveForward() {
         Rover rover = new Rover(0, 0, Directions.NORTH);
 
-        rover.receive("f");
+        rover.receive(CommandsTable.FORWARD);
 
         assertEquals(new Rover(0, 1, Directions.NORTH), rover);
     }
@@ -16,7 +16,7 @@ public class RoverPositionTests {
     public void facingNorthMoveBackward() {
         Rover rover = new Rover(0, 0, Directions.NORTH);
 
-        rover.receive("b");
+        rover.receive(CommandsTable.BACKWARD);
 
         assertEquals(new Rover(0, -1, Directions.NORTH), rover);
     }
@@ -25,7 +25,7 @@ public class RoverPositionTests {
     public void facingSouthMoveForward() {
         Rover rover = new Rover(0, 0, Directions.SOUTH);
 
-        rover.receive("f");
+        rover.receive(CommandsTable.FORWARD);
 
         assertEquals(new Rover(0, -1, Directions.SOUTH), rover);
     }
@@ -34,7 +34,7 @@ public class RoverPositionTests {
     public void facingSouthMoveBackward() {
         Rover rover = new Rover(0, 0, Directions.SOUTH);
 
-        rover.receive("b");
+        rover.receive(CommandsTable.BACKWARD);
 
         assertEquals(new Rover(0, 1, Directions.SOUTH), rover);
     }
@@ -43,7 +43,7 @@ public class RoverPositionTests {
     public void facingWestMoveForward() {
         Rover rover = new Rover(0, 0, Directions.WEST);
 
-        rover.receive("f");
+        rover.receive(CommandsTable.FORWARD);
 
         assertEquals(new Rover(-1, 0, Directions.WEST), rover);
     }
@@ -52,7 +52,7 @@ public class RoverPositionTests {
     public void facingWestMoveBackward() {
         Rover rover = new Rover(0, 0, Directions.WEST);
 
-        rover.receive("b");
+        rover.receive(CommandsTable.BACKWARD);
 
         assertEquals(new Rover(1, 0, Directions.WEST), rover);
     }
@@ -61,7 +61,7 @@ public class RoverPositionTests {
     public void facingEastMoveForward() {
         Rover rover = new Rover(0, 0, Directions.EAST);
 
-        rover.receive("f");
+        rover.receive(CommandsTable.FORWARD);
 
         assertEquals(new Rover(1, 0, Directions.EAST), rover);
     }
@@ -70,7 +70,7 @@ public class RoverPositionTests {
     public void facingEastMoveBackward() {
         Rover rover = new Rover(0, 0, Directions.EAST);
 
-        rover.receive("b");
+        rover.receive(CommandsTable.BACKWARD);
 
         assertEquals(new Rover(-1, 0, Directions.EAST), rover);
     }

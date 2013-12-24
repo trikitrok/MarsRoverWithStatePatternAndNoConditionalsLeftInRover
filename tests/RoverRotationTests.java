@@ -7,7 +7,7 @@ public class RoverRotationTests {
     public void facingNorthRotateLeft() {
         Rover rover = new Rover(0, 0, Directions.NORTH);
 
-        rover.receive("l");
+        rover.receive(CommandsTable.LEFT);
 
         assertEquals(new Rover(0, 0, Directions.WEST), rover);
     }
@@ -16,7 +16,7 @@ public class RoverRotationTests {
     public void facingNorthRotateRight() {
         Rover rover = new Rover(0, 0, Directions.NORTH);
 
-        rover.receive("r");
+        rover.receive(CommandsTable.RIGHT);
 
         assertEquals(new Rover(0, 0, Directions.EAST), rover);
     }
@@ -25,7 +25,7 @@ public class RoverRotationTests {
     public void facingSouthRotateLeft() {
         Rover rover = new Rover(0, 0, Directions.SOUTH);
 
-        rover.receive("l");
+        rover.receive(CommandsTable.LEFT);
 
         assertEquals(new Rover(0, 0, Directions.EAST), rover);
     }
@@ -34,7 +34,7 @@ public class RoverRotationTests {
     public void facingSouthRotateRight() {
         Rover rover = new Rover(0, 0, Directions.SOUTH);
 
-        rover.receive("r");
+        rover.receive(CommandsTable.RIGHT);
 
         assertEquals(new Rover(0, 0, Directions.WEST), rover);
     }
@@ -43,7 +43,7 @@ public class RoverRotationTests {
     public void facingWestRotateLeft() {
         Rover rover = new Rover(0, 0, Directions.WEST);
 
-        rover.receive("l");
+        rover.receive(CommandsTable.LEFT);
 
         assertEquals(new Rover(0, 0, Directions.SOUTH), rover);
     }
@@ -52,7 +52,7 @@ public class RoverRotationTests {
     public void facingWestRotateRight() {
         Rover rover = new Rover(0, 0, Directions.WEST);
 
-        rover.receive("r");
+        rover.receive(CommandsTable.RIGHT);
 
         assertEquals(new Rover(0, 0, Directions.NORTH), rover);
     }
@@ -61,7 +61,7 @@ public class RoverRotationTests {
     public void facingEastRotateLeft() {
         Rover rover = new Rover(0, 0, Directions.EAST);
 
-        rover.receive("l");
+        rover.receive(CommandsTable.LEFT);
 
         assertEquals(new Rover(0, 0, Directions.NORTH), rover);
     }
@@ -70,7 +70,7 @@ public class RoverRotationTests {
     public void facingEastRotateRight() {
         Rover rover = new Rover(0, 0, Directions.EAST);
 
-        rover.receive("r");
+        rover.receive(CommandsTable.RIGHT);
 
         assertEquals(new Rover(0, 0, Directions.SOUTH), rover);
     }
