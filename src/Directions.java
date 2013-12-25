@@ -5,7 +5,7 @@ public class Directions {
     public final static String SOUTH = "S";
     public final static String EAST = "E";
     public final static String WEST = "W";
-    
+
     private HashMap<String, Direction> directions;
     
     public Directions() {
@@ -16,7 +16,7 @@ public class Directions {
         directions.put(WEST, new West(this));
     }
     
-    Direction get(String direction) {
+    public Direction get(String direction) {
         return directions.get(direction);
     }
 }
