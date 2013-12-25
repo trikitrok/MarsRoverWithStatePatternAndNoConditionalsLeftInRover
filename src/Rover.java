@@ -16,9 +16,7 @@ public class Rover {
     }
 
     private Commands createCommands(String commandSequence) {
-        CommandsTable commandsTable = new CommandsTable();        
-        Commands commands = commandsTable.createCommands(commandSequence);
-        return commands;
+        return new CommandsTable().createCommands(commandSequence);
     }
 
     @Override

@@ -3,7 +3,7 @@ public class East extends Direction {
     public East(Directions directions) {
         super(directions);
     }
-    
+
     public Direction rotateRight() {
         return directions.get(Directions.SOUTH);
     }
